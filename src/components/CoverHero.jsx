@@ -31,7 +31,7 @@ export default function CoverHero({ onOpenInvitation, isUnlocked }) {
           src={coverSrc}
           alt="Athira and Sandeep Wedding Cover"
           onError={() => setImgFailed(true)}
-          className="absolute inset-0 h-full w-full object-cover object-center opacity-70 scale-105 transition-transform duration-[4000ms] ease-out"
+          className="absolute inset-0 h-full w-full object-cover object-[50%_28%] opacity-70 scale-105 transition-transform duration-[4000ms] ease-out"
         />
       )}
 

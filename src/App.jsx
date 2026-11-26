@@ -4,6 +4,7 @@ import CoverHero from './components/CoverHero'
 import MainInvitation from './components/MainInvitation'
 import CalendarCard from './components/CalendarCard'
 import StoryCard from './components/StoryCard'
+import PhotoGallery from './components/PhotoGallery'
 import EventTimeline from './components/EventTimeline'
 import CountdownFooter from './components/CountdownFooter'
 
@@ -99,6 +100,7 @@ export default function App() {
         <MainInvitation />
         <CalendarCard />
         <StoryCard />
+        <PhotoGallery />
         <EventTimeline />
         <CountdownFooter />
       </main>

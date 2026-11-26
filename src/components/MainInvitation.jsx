@@ -12,13 +12,13 @@ export default function MainInvitation() {
     >
       <div className="reveal-section max-w-3xl mx-auto rounded-2xl overflow-hidden shadow-[0_20px_60px_rgba(74,14,23,0.12)] border border-[#C59B5F]/40 bg-[#E8DDD1]">
         {/* Couple Photo Area with Warm Fallback */}
-        <div className="relative w-full h-[380px] sm:h-[480px] bg-gradient-to-b from-[#69212C] via-[#4A0E17] to-[#32080E] overflow-hidden">
+        <div className="relative w-full h-[460px] sm:h-[620px] bg-gradient-to-b from-[#69212C] via-[#4A0E17] to-[#32080E] overflow-hidden">
           {!imgFailed && (
             <img
               src={coupleSrc}
               alt="Athira and Sandeep"
               onError={() => setImgFailed(true)}
-              className="w-full h-full object-cover object-center"
+              className="w-full h-full object-cover object-[50%_32%]"
             />
           )}
 
@@ -29,7 +29,7 @@ export default function MainInvitation() {
           <svg
             viewBox="0 0 1440 110"
             preserveAspectRatio="none"
-            className="absolute -bottom-px left-0 w-full h-14 sm:h-20 block pointer-events-none"
+            className="absolute -bottom-px left-0 w-full h-10 sm:h-14 block pointer-events-none"
             aria-hidden="true"
           >
             <path
@@ -103,7 +103,7 @@ export default function MainInvitation() {
                       Venue
                     </p>
                     <p className="font-serif text-sm font-semibold tracking-wider text-[#4A0E17] leading-snug">
-                      GOWREESANKARAM AUDITORIUM, ANTHINAAD
+                      GOURISANKARAM AUDITORIUM, ANTHINAD
                     </p>
                   </div>
                 </div>

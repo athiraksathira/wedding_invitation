@@ -26,14 +26,14 @@ const TIMELINE_ITEMS = [
   {
     id: 'venue',
     label: 'Venue',
-    value: 'Gowreesankaram Auditorium, Anthinaad',
-    subtext: 'Anthinaad, Kerala',
+    value: 'Gourisankaram Auditorium, Anthinad',
+    subtext: 'Anthinad, Kerala',
     icon: MapPin,
   },
 ]
 
 const GOOGLE_MAPS_URL =
-  'https://www.google.com/maps/search/?api=1&query=Gowreesankaram+Auditorium+Anthinaad'
+  'https://www.google.com/maps/search/?api=1&query=Gourisankaram+Auditorium+Anthinad'
 
 export default function EventTimeline() {
   const [imgFailed, setImgFailed] = useState(false)
@@ -45,7 +45,7 @@ export default function EventTimeline() {
       {!imgFailed && (
         <img
           src={venueBgSrc}
-          alt="Gowreesankaram Auditorium Background"
+          alt="Gourisankaram Auditorium Background"
           onError={() => setImgFailed(true)}
           className="absolute inset-0 w-full h-full object-cover object-center opacity-35"
         />
