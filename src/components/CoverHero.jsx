@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Sparkles, ChevronDown } from 'lucide-react'
 
 const PARTICLES = [
@@ -16,11 +17,24 @@ const PARTICLES = [
 ]
 
 export default function CoverHero({ onOpenInvitation, isUnlocked }) {
+  const [imgFailed, setImgFailed] = useState(false)
+  const coverSrc = `${import.meta.env.BASE_URL}assets/cover.jpg`
+
   return (
     <section
       id="cover-hero"
       className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-[#2E080F] via-[#4A0E17] to-[#1D0509] text-[#FAF7F2]"
     >
+      {/* Background cover image with warm dark fallback */}
+      {!imgFailed && (
+        <img
+          src={coverSrc}
+          alt="Athira and Sandeep Wedding Cover"
+          onError={() => setImgFailed(true)}
+          className="absolute inset-0 h-full w-full object-cover object-[50%_28%] opacity-70 scale-105 transition-transform duration-[4000ms] ease-out"
+        />
+      )}
+
       {/* Rich layered dark maroon & warm vignette overlay */}
       <div
         className="absolute inset-0 pointer-events-none"
