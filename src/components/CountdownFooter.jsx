@@ -66,7 +66,7 @@ export default function CountdownFooter() {
         {/* Footer Signature */}
         <div className="pt-8 border-t border-[#C59B5F]/35 flex flex-col items-center">
           <div className="font-serif italic text-3xl sm:text-4xl tracking-widest text-[#4A0E17] mb-3">
-            a <span className="text-[#4A0E17] not-italic mx-1">♥</span> s
+            A <span className="text-[#4A0E17] not-italic mx-1">♥</span> S
           </div>
           <p className="font-sans text-xs sm:text-sm tracking-[0.35em] uppercase font-semibold text-[#4A0E17]">
             ATHIRA &amp; SANDEEP

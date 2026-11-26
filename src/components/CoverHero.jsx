@@ -1,19 +1,19 @@
 import { useState } from 'react'
-import { Sparkles, ChevronDown } from 'lucide-react'
+import { Sparkles, ChevronDown, Heart } from 'lucide-react'
 
 const PARTICLES = [
-  { id: 1, left: '6%', delay: '0s', duration: '9s', size: 6, type: 'sparkle' },
-  { id: 2, left: '14%', delay: '1.8s', duration: '12s', size: 10, type: 'petal' },
-  { id: 3, left: '22%', delay: '0.7s', duration: '10.5s', size: 5, type: 'sparkle' },
-  { id: 4, left: '31%', delay: '3.2s', duration: '13s', size: 11, type: 'petal' },
-  { id: 5, left: '39%', delay: '2.1s', duration: '9.5s', size: 6, type: 'sparkle' },
-  { id: 6, left: '48%', delay: '4.5s', duration: '11.5s', size: 9, type: 'petal' },
-  { id: 7, left: '57%', delay: '1.1s', duration: '10s', size: 5, type: 'sparkle' },
-  { id: 8, left: '66%', delay: '3.8s', duration: '12.5s', size: 11, type: 'petal' },
-  { id: 9, left: '75%', delay: '0.4s', duration: '9.8s', size: 6, type: 'sparkle' },
-  { id: 10, left: '83%', delay: '2.9s', duration: '11.8s', size: 10, type: 'petal' },
-  { id: 11, left: '91%', delay: '1.4s', duration: '10.2s', size: 5, type: 'sparkle' },
-  { id: 12, left: '96%', delay: '4.1s', duration: '12.8s', size: 9, type: 'petal' },
+  { id: 1, left: '6%', delay: '0s', duration: '9s', size: 12, tone: 'gold' },
+  { id: 2, left: '14%', delay: '1.8s', duration: '12s', size: 14, tone: 'ivory' },
+  { id: 3, left: '22%', delay: '0.7s', duration: '10.5s', size: 10, tone: 'gold' },
+  { id: 4, left: '31%', delay: '3.2s', duration: '13s', size: 15, tone: 'ivory' },
+  { id: 5, left: '39%', delay: '2.1s', duration: '9.5s', size: 11, tone: 'gold' },
+  { id: 6, left: '48%', delay: '4.5s', duration: '11.5s', size: 13, tone: 'ivory' },
+  { id: 7, left: '57%', delay: '1.1s', duration: '10s', size: 10, tone: 'gold' },
+  { id: 8, left: '66%', delay: '3.8s', duration: '12.5s', size: 14, tone: 'ivory' },
+  { id: 9, left: '75%', delay: '0.4s', duration: '9.8s', size: 12, tone: 'gold' },
+  { id: 10, left: '83%', delay: '2.9s', duration: '11.8s', size: 14, tone: 'ivory' },
+  { id: 11, left: '91%', delay: '1.4s', duration: '10.2s', size: 11, tone: 'gold' },
+  { id: 12, left: '96%', delay: '4.1s', duration: '12.8s', size: 13, tone: 'ivory' },
 ]
 
 export default function CoverHero({ onOpenInvitation, isUnlocked }) {
@@ -48,36 +48,26 @@ export default function CoverHero({ onOpenInvitation, isUnlocked }) {
       <div className="pointer-events-none absolute inset-4 sm:inset-7 border border-[#C59B5F]/35 rounded-sm" />
       <div className="pointer-events-none absolute inset-6 sm:inset-9 border border-[#C59B5F]/15 rounded-sm" />
 
-      {/* Subtle falling sparkle & petal particles */}
+      {/* Subtle falling love heart particles */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
-        {PARTICLES.map((p) =>
-          p.type === 'sparkle' ? (
-            <span
-              key={p.id}
-              className="animate-sparkle absolute -top-6 rounded-full bg-[#DEC291]"
-              style={{
-                left: p.left,
-                width: `${p.size}px`,
-                height: `${p.size}px`,
-                animationDelay: p.delay,
-                animationDuration: p.duration,
-                boxShadow: '0 0 10px rgba(222, 194, 145, 0.9)',
-              }}
-            />
-          ) : (
-            <span
-              key={p.id}
-              className="animate-petal absolute -top-8 rounded-tl-full rounded-br-full bg-[#E8DDD1]/55 border border-[#C59B5F]/40"
-              style={{
-                left: p.left,
-                width: `${p.size}px`,
-                height: `${p.size * 1.35}px`,
-                animationDelay: p.delay,
-                animationDuration: p.duration,
-              }}
-            />
-          )
-        )}
+        {PARTICLES.map((p) => (
+          <Heart
+            key={p.id}
+            fill="currentColor"
+            className={`${
+              p.tone === 'gold'
+                ? 'animate-sparkle text-[#DEC291]/85 drop-shadow-[0_0_8px_rgba(222,194,145,0.7)]'
+                : 'animate-petal text-[#E8DDD1]/75 drop-shadow-[0_0_6px_rgba(232,221,209,0.45)]'
+            } absolute -top-8`}
+            style={{
+              left: p.left,
+              width: `${p.size}px`,
+              height: `${p.size}px`,
+              animationDelay: p.delay,
+              animationDuration: p.duration,
+            }}
+          />
+        ))}
       </div>
 
       {/* Main Cover Content */}
