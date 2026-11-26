@@ -99,6 +99,24 @@ body {
   }
 }
 
+@keyframes gentle-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+@keyframes gallery-shimmer {
+  0% {
+    transform: translateX(-120%) skewX(-18deg);
+  }
+  100% {
+    transform: translateX(220%) skewX(-18deg);
+  }
+}
+
 .animate-sparkle {
   animation: fall-sparkle linear infinite;
 }
@@ -113,6 +131,18 @@ body {
 
 .animate-pulse-ring {
   animation: pulse-ring 2.2s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+}
+
+.animate-float {
+  animation: gentle-float 5.5s ease-in-out infinite;
+}
+
+.animate-float:hover {
+  animation-play-state: paused;
+}
+
+.group:hover .gallery-shimmer-sweep {
+  animation: gallery-shimmer 0.9s ease-out forwards;
 }
 
 .reveal-section {
