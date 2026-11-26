@@ -55,17 +55,17 @@ export default function CalendarCard() {
                 >
                   <svg
                     viewBox="0 0 48 44"
-                    className="w-11 h-10 animate-heart-glow"
+                    className="absolute inset-0 m-auto w-11 h-10 animate-heart-glow"
                     aria-hidden="true"
                   >
                     <path
                       d="M24 41.5 C24 41.5 3.5 28.8 3.5 14.5 C3.5 7.4 9.1 2 15.8 2 C19.8 2 22.8 4 24 6.7 C25.2 4 28.2 2 32.2 2 C38.9 2 44.5 7.4 44.5 14.5 C44.5 28.8 24 41.5 24 41.5 Z"
-                      fill="#4A0E17"
+                      fill="#A31621"
                       stroke="#C59B5F"
                       strokeWidth="1.6"
                     />
                   </svg>
-                  <span className="relative z-10 text-xs sm:text-sm font-bold text-[#FAF7F2] -mt-0.5">
+                  <span className="relative z-10 text-xs sm:text-sm font-bold text-[#FFFFFF] -mt-1">
                     20
                   </span>
                 </div>

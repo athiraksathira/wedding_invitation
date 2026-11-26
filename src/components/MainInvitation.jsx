@@ -48,9 +48,6 @@ export default function MainInvitation() {
 
             {/* Combined Calligraphic Title */}
             <div className="mt-8 pt-6 border-t border-[#C59B5F]/40">
-              <p className="font-script text-4xl sm:text-5xl text-[#4A0E17] mb-6">
-                Athira &amp; Sandeep
-              </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left max-w-lg mx-auto">
                 <div className="flex items-start gap-3 rounded-lg border border-[#C59B5F]/45 bg-[#FAF7F2]/80 px-4 py-3">
