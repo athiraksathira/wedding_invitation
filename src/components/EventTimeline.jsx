@@ -12,7 +12,7 @@ const TIMELINE_ITEMS = [
   {
     id: 'muhurtham',
     label: 'Muhurtham',
-    value: '12:00 PM – 12:20 PM',
+    value: '12:00 PM – 12:45 PM',
     subtext: 'Auspicious Wedding Hour',
     icon: Clock,
   },
