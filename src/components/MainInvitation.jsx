@@ -12,37 +12,6 @@ export default function MainInvitation() {
     >
       <div className="reveal-section max-w-3xl mx-auto rounded-2xl overflow-hidden shadow-[0_20px_60px_rgba(74,14,23,0.12)] border border-[#C59B5F]/40 bg-[#E8DDD1]">
         {/* Couple Photo Area with Warm Fallback */}
-        <div className="relative w-full h-[460px] sm:h-[620px] bg-gradient-to-b from-[#69212C] via-[#4A0E17] to-[#32080E] overflow-hidden">
-          {!imgFailed && (
-            <img
-              src={coupleSrc}
-              alt="Athira and Sandeep"
-              onError={() => setImgFailed(true)}
-              className="w-full h-full object-cover object-[50%_32%]"
-            />
-          )}
-
-          {/* Subtle gradient tint over bottom for seamless edge */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#4A0E17]/40 via-transparent to-[#1F0509]/20 pointer-events-none" />
-
-          {/* SVG Torn-Paper Edge Transition into Soft Beige Card */}
-          <svg
-            viewBox="0 0 1440 110"
-            preserveAspectRatio="none"
-            className="absolute -bottom-px left-0 w-full h-10 sm:h-14 block pointer-events-none"
-            aria-hidden="true"
-          >
-            <path
-              d="M0,46 L38,62 L74,38 L118,58 L164,34 L205,64 L252,42 L298,66 L345,39 L392,61 L444,31 L492,65 L540,44 L590,68 L636,36 L688,63 L735,40 L786,67 L834,33 L884,60 L932,42 L982,66 L1030,35 L1080,62 L1128,38 L1176,65 L1224,41 L1272,63 L1320,37 L1370,59 L1412,42 L1440,54 L1440,110 L0,110 Z"
-              fill="#FAF7F2"
-              opacity="0.45"
-            />
-            <path
-              d="M0,56 L42,72 L86,48 L130,70 L176,45 L224,74 L274,52 L322,76 L372,49 L420,73 L468,43 L518,75 L566,53 L614,77 L662,47 L714,72 L762,50 L812,76 L860,44 L910,70 L958,51 L1008,75 L1056,46 L1104,72 L1152,49 L1202,74 L1250,51 L1298,72 L1346,48 L1396,68 L1440,56 L1440,110 L0,110 Z"
-              fill="#E8DDD1"
-            />
-          </svg>
-        </div>
 
         {/* Soft Beige Invitation Details Card */}
         <div className="relative bg-[#E8DDD1] px-6 sm:px-12 pt-4 pb-12 sm:pb-14 text-center">

@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight, Sparkles, X } from 'lucide-react'
 const GALLERY_PHOTOS = [
   {
     file: 'couple1.jpg',
-    alt: 'Athira and Sandeep in royal blue',
+    alt: 'Athira and Sandeep in black attire',
     caption: 'Forever Begins',
     position: 'object-[50%_18%]',
   },
